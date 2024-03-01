@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc60ry10t6wvo"
-path="res://.godot/imported/Necromancer_creativekind-Sheet.png-4265beecd58a0997777a8a01a321a5c8.ctex"
+uid="uid://dh4k8ia1xgh6r"
+path="res://.godot/imported/Cat Sprite Sheet.png-b51774e77104f598ef17aefbe4dabbbb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/necromancer/Necromancer_creativekind-Sheet.png"
-dest_files=["res://.godot/imported/Necromancer_creativekind-Sheet.png-4265beecd58a0997777a8a01a321a5c8.ctex"]
+source_file="res://unused/cat/Cat Sprite Sheet.png"
+dest_files=["res://.godot/imported/Cat Sprite Sheet.png-b51774e77104f598ef17aefbe4dabbbb.ctex"]
 
 [params]
 
