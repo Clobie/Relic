@@ -2,30 +2,37 @@ class_name StateMachine
 extends Node
 
 @export var state: State
-@export var default_state: String = "default"
+
+@onready var unit = get_parent() as CharacterBody2D
+@onready var anim = unit.find_child("AnimatedSprite2D") as AnimatedSprite2D
+@onready var debug = unit.find_child("debug") as TextEdit
 
 var states: Dictionary
 
-@export var unit: CharacterBody2D
-
 func _ready() -> void:
-	set_state(default_state)
 	for child in get_children():
 		if child is State:
 			states[child.name] = child
+	set_state(state.name)
 
 func _process(delta: float) -> void:
-	state.loop_process(delta)
+	if state is State:
+		state.loop_process(delta)
 
 func _physics_process(delta: float) -> void:
-	state.loop_physics_process(delta)
-	state.unit.move_and_slide()
+	if state is State:
+		state.loop_physics_process(delta)
+	unit.move_and_slide()
 
 func set_state(new_state: String):
 	if states.has(new_state):
 		state.exit_state()
+		states[new_state].enter_state()
 		state = states[new_state]
-		state.enter_state()
+
+		# Debugging
+		if debug is TextEdit:
+			debug.text = state.name
 
 func get_state():
-	return state.name
+	return state

@@ -1,10 +1,16 @@
 extends State
 
+# unit: CharacterBody2D
+# statemachine: StateMachine
+# anim: AnimatedSprite2D
+# anim_name: String
+
 func _ready():
-	pass
+	super()
+	anim_name = ""
 
 func enter_state():
-	pass
+	anim.play(anim_name)
 
 func exit_state():
 	pass

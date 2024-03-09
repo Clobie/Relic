@@ -7,24 +7,27 @@ extends State
 
 func _ready():
 	super()
-	anim_name = "idle"
+	anim_name = "run"
 
 func enter_state():
-	super()
 	anim.play(anim_name)
 
 func exit_state():
 	pass
 
 func loop_physics_process(delta):
+	if !unit.move_axis():
+		statemachine.set_state("idle")
 	if unit.jump():
 		statemachine.set_state("jump")
-	if unit.move_axis():
-		statemachine.set_state("run")
+	unit.velocity.x = unit.move_axis() * unit.run_speed * delta
 	unit.apply_gravity(delta)
-	unit.velocity.x = 0
+	unit.apply_friction(delta)
 	if unit.is_on_floor():
 		unit.can_jump = true
 		unit.can_double_jump = true
+	else:
+		statemachine.set_state("fall")
+
 func loop_process(delta):
 	pass

@@ -1,19 +1,28 @@
 extends State
 
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+# unit: CharacterBody2D
+# statemachine: StateMachine
+# anim: AnimatedSprite2D
+# anim_name: String
 
 func _ready():
-	pass
+	super()
+	anim_name = "jump_start"
 
 func enter_state():
-	animatedsprite.play("jump")
+	anim.play(anim_name)
+	unit.velocity.y = -unit.jump_force
+	unit.can_jump = false
 
 func exit_state():
 	pass
 
 func loop_physics_process(delta):
-	if !unit.is_on_floor():
-		unit.velocity.y += gravity * delta
+	unit.apply_gravity(delta)
+	statemachine.set_state("fall")
+	if unit.is_on_floor():
+		unit.can_jump = true
+		unit.can_double_jump = true
 
 func loop_process(delta):
 	pass

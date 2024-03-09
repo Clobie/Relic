@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bovv7ed1k0gsq"]
 
-[ext_resource type="Script" path="res://scenes/interface/main_menu.gd" id="1_btfu8"]
+[ext_resource type="Script" path="res://scenes/interface/main_menu/main_menu.gd" id="1_btfu8"]
 
 [sub_resource type="Theme" id="Theme_cis8b"]
 Button/colors/font_color = Color(0, 1, 0.603922, 1)
