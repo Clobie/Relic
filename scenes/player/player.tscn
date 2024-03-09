@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=3 uid="uid://cxlw6ocqk475r"]
+[gd_scene load_steps=104 format=3 uid="uid://cxlw6ocqk475r"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_k1u3f"]
 [ext_resource type="Shader" path="res://shaders/white_mask.gdshader" id="2_hitbc"]
@@ -13,6 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://d1281vwqnfsc4" path="res://assets/textures/player/run cycle 48x48.png" id="11_et86i"]
 [ext_resource type="Texture2D" uid="uid://lqto3kkxkuo" path="res://assets/textures/player/player shoot 2H 48x48.png" id="12_ihhw4"]
 [ext_resource type="Texture2D" uid="uid://c1k87xx4l1l8i" path="res://assets/textures/light01.png" id="13_lsjyh"]
+[ext_resource type="Script" path="res://scripts/state_machine/state_machine.gd" id="14_6a8vq"]
+[ext_resource type="Script" path="res://scenes/player/states/idle.gd" id="15_8ocho"]
+[ext_resource type="Script" path="res://scenes/player/states/jump.gd" id="16_o6hoa"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3g8ej"]
 radius = 8.0
@@ -672,8 +675,9 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("statemachine")]
 script = ExtResource("1_k1u3f")
+statemachine = NodePath("StateMachine")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_3g8ej")
@@ -692,3 +696,22 @@ frame_progress = 0.998148
 energy = 0.5
 texture = ExtResource("13_lsjyh")
 texture_scale = 0.5
+
+[node name="StateStatus" type="TextEdit" parent="."]
+offset_left = -12.0
+offset_top = -29.0
+offset_right = 84.0
+offset_bottom = 7.0
+scale = Vector2(0.25, 0.25)
+text = "State"
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("state", "unit")]
+script = ExtResource("14_6a8vq")
+state = NodePath("idle")
+unit = NodePath("..")
+
+[node name="idle" type="Node" parent="StateMachine"]
+script = ExtResource("15_8ocho")
+
+[node name="jump" type="Node" parent="StateMachine"]
+script = ExtResource("16_o6hoa")
