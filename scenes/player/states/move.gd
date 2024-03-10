@@ -18,16 +18,18 @@ func exit_state():
 func loop_physics_process(delta):
 	if !unit.move_axis():
 		statemachine.set_state("idle")
-	if unit.jump():
+	elif unit.jump():
 		statemachine.set_state("jump")
-	unit.velocity.x = unit.move_axis() * unit.run_speed * delta
-	unit.apply_gravity(delta)
-	unit.apply_friction(delta)
-	if unit.is_on_floor():
-		unit.can_jump = true
-		unit.can_double_jump = true
+	elif unit.shoot():
+		statemachine.set_state("shoot")
 	else:
-		statemachine.set_state("fall")
+		unit.velocity.x = unit.move_axis() * unit.run_speed * delta
+		unit.apply_gravity(delta)
+		if unit.is_on_floor():
+			unit.can_jump = true
+			unit.can_double_jump = true
+		else:
+			statemachine.set_state("fall")
 
 func loop_process(delta):
 	pass
