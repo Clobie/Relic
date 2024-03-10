@@ -25,6 +25,8 @@ func loop_physics_process(delta):
 		statemachine.set_state("fall")
 	elif unit.is_crouching():
 		unit.apply_gravity(delta*0.05)
+	elif !unit.is_crouching():
+		unit.velocity.y = 0
 	else:
 		pass#unit.apply_gravity(delta*0.05)
 
