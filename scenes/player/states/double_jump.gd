@@ -40,7 +40,7 @@ func loop_physics_process(delta):
 		)
 		if change_dir_once:
 			change_dir_once = false
-			unit.velocity.x = unit.move_axis() * unit.run_speed * delta
+			#unit.velocity.x = unit.move_axis() * unit.run_speed * delta / 2.0
 		if unit.is_on_floor():
 			unit.can_jump = true
 			unit.can_double_jump = true

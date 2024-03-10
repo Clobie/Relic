@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c8tsu38tgb055"]
+[gd_scene load_steps=7 format=3 uid="uid://c8tsu38tgb055"]
 
 [ext_resource type="PackedScene" uid="uid://dyxtfb5bp0j5n" path="res://scenes/tilemaps/dungeon1.tscn" id="1_ptxxs"]
 [ext_resource type="Shader" path="res://shaders/greyscale.gdshader" id="2_bqi7j"]
@@ -8,197 +8,20 @@
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_avpod"]
 light_mode = 1
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_lkrcu"]
-light_mode = 1
-
-[sub_resource type="Gradient" id="Gradient_hgjqn"]
-offsets = PackedFloat32Array(0, 0.183168, 0.836634, 1)
-colors = PackedColorArray(0.305882, 0.121569, 0, 0, 0.517647, 0.223529, 0, 1, 0.410133, 0.173266, 0, 1, 0.576471, 0.407843, 0, 0)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_o2vxb"]
-gradient = SubResource("Gradient_hgjqn")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_gm5wc"]
-particle_flag_disable_z = true
-emission_shape = 3
-emission_box_extents = Vector3(220, 120, 0)
-inherit_velocity_ratio = 0.388
-gravity = Vector3(0, -1, 0)
-color_ramp = SubResource("GradientTexture1D_o2vxb")
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qux44"]
 shader = ExtResource("2_bqi7j")
-shader_parameter/darkness = 1.0
+shader_parameter/darkness = 4.0
 
 [node name="Room1" type="Node2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_avpod")
-offset_left = -894.0
-offset_top = -472.0
-offset_right = 2690.0
-offset_bottom = 1505.0
-color = Color(0.00784314, 0.00784314, 0.00784314, 1)
-metadata/_edit_lock_ = true
-
-[node name="Particles" type="Node2D" parent="."]
-visible = false
-metadata/_edit_lock_ = true
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="Particles"]
-texture_filter = 1
-material = SubResource("CanvasItemMaterial_lkrcu")
-position = Vector2(212, 841)
-amount = 50
-process_material = SubResource("ParticleProcessMaterial_gm5wc")
-lifetime = 5.0
-preprocess = 30.0
-visibility_rect = Rect2(-400, -300, 800, 600)
-metadata/_edit_lock_ = true
-
-[node name="GPUParticles2D2" type="GPUParticles2D" parent="Particles"]
-texture_filter = 1
-material = SubResource("CanvasItemMaterial_lkrcu")
-position = Vector2(886, 836)
-amount = 50
-process_material = SubResource("ParticleProcessMaterial_gm5wc")
-lifetime = 5.0
-preprocess = 30.0
-visibility_rect = Rect2(-400, -300, 800, 600)
-metadata/_edit_lock_ = true
-
-[node name="GPUParticles2D3" type="GPUParticles2D" parent="Particles"]
-texture_filter = 1
-material = SubResource("CanvasItemMaterial_lkrcu")
-position = Vector2(1530, 827)
-amount = 50
-process_material = SubResource("ParticleProcessMaterial_gm5wc")
-lifetime = 5.0
-preprocess = 30.0
-visibility_rect = Rect2(-400, -300, 800, 600)
-metadata/_edit_lock_ = true
-
-[node name="GPUParticles2D4" type="GPUParticles2D" parent="Particles"]
-texture_filter = 1
-material = SubResource("CanvasItemMaterial_lkrcu")
-position = Vector2(2187, 810)
-amount = 50
-process_material = SubResource("ParticleProcessMaterial_gm5wc")
-lifetime = 5.0
-preprocess = 30.0
-visibility_rect = Rect2(-400, -300, 800, 600)
-metadata/_edit_lock_ = true
-
-[node name="GPUParticles2D5" type="GPUParticles2D" parent="Particles"]
-texture_filter = 1
-material = SubResource("CanvasItemMaterial_lkrcu")
-position = Vector2(1875, 325)
-amount = 50
-process_material = SubResource("ParticleProcessMaterial_gm5wc")
-lifetime = 5.0
-preprocess = 30.0
-visibility_rect = Rect2(-400, -300, 800, 600)
-metadata/_edit_lock_ = true
-
-[node name="GPUParticles2D6" type="GPUParticles2D" parent="Particles"]
-texture_filter = 1
-material = SubResource("CanvasItemMaterial_lkrcu")
-position = Vector2(1181, 304)
-amount = 50
-process_material = SubResource("ParticleProcessMaterial_gm5wc")
-lifetime = 5.0
-preprocess = 30.0
-visibility_rect = Rect2(-400, -300, 800, 600)
-metadata/_edit_lock_ = true
-
-[node name="GPUParticles2D7" type="GPUParticles2D" parent="Particles"]
-texture_filter = 1
-material = SubResource("CanvasItemMaterial_lkrcu")
-position = Vector2(525, 316)
-amount = 50
-process_material = SubResource("ParticleProcessMaterial_gm5wc")
-lifetime = 5.0
-preprocess = 30.0
-visibility_rect = Rect2(-400, -300, 800, 600)
-metadata/_edit_lock_ = true
-
-[node name="GPUParticles2D8" type="GPUParticles2D" parent="Particles"]
-texture_filter = 1
-material = SubResource("CanvasItemMaterial_lkrcu")
-position = Vector2(-131, 323)
-amount = 50
-process_material = SubResource("ParticleProcessMaterial_gm5wc")
-lifetime = 5.0
-preprocess = 30.0
-visibility_rect = Rect2(-400, -300, 800, 600)
-metadata/_edit_lock_ = true
-
-[node name="GPUParticles2D9" type="GPUParticles2D" parent="Particles"]
-texture_filter = 1
-material = SubResource("CanvasItemMaterial_lkrcu")
-position = Vector2(-317, 837)
-amount = 50
-process_material = SubResource("ParticleProcessMaterial_gm5wc")
-lifetime = 5.0
-preprocess = 30.0
-visibility_rect = Rect2(-400, -300, 800, 600)
-metadata/_edit_lock_ = true
-
-[node name="GPUParticles2D10" type="GPUParticles2D" parent="Particles"]
-texture_filter = 1
-material = SubResource("CanvasItemMaterial_lkrcu")
-position = Vector2(2467, 348)
-amount = 50
-process_material = SubResource("ParticleProcessMaterial_gm5wc")
-lifetime = 5.0
-preprocess = 30.0
-visibility_rect = Rect2(-400, -300, 800, 600)
-metadata/_edit_lock_ = true
-
-[node name="GPUParticles2D11" type="GPUParticles2D" parent="Particles"]
-texture_filter = 1
-material = SubResource("CanvasItemMaterial_lkrcu")
-position = Vector2(2021, -73)
-amount = 50
-process_material = SubResource("ParticleProcessMaterial_gm5wc")
-lifetime = 5.0
-preprocess = 30.0
-visibility_rect = Rect2(-400, -300, 800, 600)
-metadata/_edit_lock_ = true
-
-[node name="GPUParticles2D12" type="GPUParticles2D" parent="Particles"]
-texture_filter = 1
-material = SubResource("CanvasItemMaterial_lkrcu")
-position = Vector2(1275, -96)
-amount = 50
-process_material = SubResource("ParticleProcessMaterial_gm5wc")
-lifetime = 5.0
-preprocess = 30.0
-visibility_rect = Rect2(-400, -300, 800, 600)
-metadata/_edit_lock_ = true
-
-[node name="GPUParticles2D13" type="GPUParticles2D" parent="Particles"]
-texture_filter = 1
-material = SubResource("CanvasItemMaterial_lkrcu")
-position = Vector2(504, -86)
-amount = 50
-process_material = SubResource("ParticleProcessMaterial_gm5wc")
-lifetime = 5.0
-preprocess = 30.0
-visibility_rect = Rect2(-400, -300, 800, 600)
-metadata/_edit_lock_ = true
-
-[node name="GPUParticles2D14" type="GPUParticles2D" parent="Particles"]
-texture_filter = 1
-material = SubResource("CanvasItemMaterial_lkrcu")
-position = Vector2(-154, -89)
-amount = 50
-process_material = SubResource("ParticleProcessMaterial_gm5wc")
-lifetime = 5.0
-preprocess = 30.0
-visibility_rect = Rect2(-400, -300, 800, 600)
-metadata/_edit_lock_ = true
+offset_left = -1082.0
+offset_top = -559.0
+offset_right = 3082.0
+offset_bottom = 1515.0
+color = Color(0, 0, 0, 1)
 
 [node name="Dungeon_BG1" parent="." instance=ExtResource("1_ptxxs")]
 material = SubResource("ShaderMaterial_qux44")
@@ -217,8 +40,9 @@ metadata/_edit_lock_ = true
 position = Vector2(-310, 1024)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+visible = false
 texture_filter = 1
-energy = 0.95
+energy = 0.99
 blend_mode = 1
 metadata/_edit_lock_ = true
 

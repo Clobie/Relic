@@ -54,12 +54,12 @@ func apply_gravity(delta) -> void:
 	velocity.y += gravity * delta
 
 func can_ledge_hold():
-	if !ledge_top_ray.is_colliding() and ledge_mid_ray.is_colliding() and wall_mid_ray.is_colliding() and move_axis() != 0:
+	if !ledge_top_ray.is_colliding() and ledge_mid_ray.is_colliding() and wall_mid_ray.is_colliding():# and move_axis() != 0:
 		return true
 	return false
 
 func can_wall_hold():
-	if ledge_top_ray.is_colliding() and ledge_mid_ray.is_colliding() and wall_mid_ray.is_colliding() and move_axis() != 0:
+	if ledge_top_ray.is_colliding() and ledge_mid_ray.is_colliding() and wall_mid_ray.is_colliding():# and move_axis() != 0:
 		return true
 	return false
 
