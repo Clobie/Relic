@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh4k8ia1xgh6r"
-path="res://.godot/imported/cat01.png-8ab146513eb9443841c76c78c35e8efe.ctex"
+uid="uid://c3nemcmrjk70j"
+path="res://.godot/imported/Skeleton Hit.png-0539fa6e9f6453e1fb38ed02f28eb223.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/cat01.png"
-dest_files=["res://.godot/imported/cat01.png-8ab146513eb9443841c76c78c35e8efe.ctex"]
+source_file="res://assets/textures/npc/skeleton/Skeleton Hit.png"
+dest_files=["res://.godot/imported/Skeleton Hit.png-0539fa6e9f6453e1fb38ed02f28eb223.ctex"]
 
 [params]
 

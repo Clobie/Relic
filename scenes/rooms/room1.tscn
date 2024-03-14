@@ -24,6 +24,7 @@ offset_top = -559.0
 offset_right = 3082.0
 offset_bottom = 1515.0
 color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
 
 [node name="Dungeon_BG1" parent="." instance=ExtResource("1_ptxxs")]
 material = SubResource("ShaderMaterial_qux44")
@@ -39,7 +40,7 @@ layer_0/tile_data = PackedInt32Array(4849652, 524288, 6, 4915188, 393216, 7, 498
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("2_cwqlp")]
-position = Vector2(-310, 1024)
+position = Vector2(-307, 1040)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 visible = false

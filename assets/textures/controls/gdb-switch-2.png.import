@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc60ry10t6wvo"
-path="res://.godot/imported/necromancer01.png-cd1788771916a6f4ad740896daaea6da.ctex"
+uid="uid://4sudl180vdqd"
+path="res://.godot/imported/gdb-switch-2.png-29746290becd27a6260dc3e23c5ade35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/necromancer01.png"
-dest_files=["res://.godot/imported/necromancer01.png-cd1788771916a6f4ad740896daaea6da.ctex"]
+source_file="res://assets/textures/controls/gdb-switch-2.png"
+dest_files=["res://.godot/imported/gdb-switch-2.png-29746290becd27a6260dc3e23c5ade35.ctex"]
 
 [params]
 

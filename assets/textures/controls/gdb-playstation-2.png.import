@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ry2iqt2x6fup"
-path="res://.godot/imported/campfire01.png-b9dd660622a4d7f84ba2a523064a7745.ctex"
+uid="uid://bh26ynoiaqkag"
+path="res://.godot/imported/gdb-playstation-2.png-44b1c4eb00efb2a3fd74d8284ec6e1c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/campfire01.png"
-dest_files=["res://.godot/imported/campfire01.png-b9dd660622a4d7f84ba2a523064a7745.ctex"]
+source_file="res://assets/textures/controls/gdb-playstation-2.png"
+dest_files=["res://.godot/imported/gdb-playstation-2.png-44b1c4eb00efb2a3fd74d8284ec6e1c1.ctex"]
 
 [params]
 

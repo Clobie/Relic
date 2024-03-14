@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dyxtfb5bp0j5n"]
 
-[ext_resource type="Texture2D" uid="uid://bbr8atmilb1v5" path="res://assets/textures/dungeon01.png" id="1_e3j83"]
+[ext_resource type="Texture2D" uid="uid://bbr8atmilb1v5" path="res://assets/textures/tilesets/dungeon01.png" id="1_e3j83"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4re78"]
 texture = ExtResource("1_e3j83")
@@ -451,7 +451,8 @@ texture = ExtResource("1_e3j83")
 6:6/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_bw7vk"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 11
 sources/0 = SubResource("TileSetAtlasSource_4re78")
 
 [node name="Dungeon1" type="TileMap"]

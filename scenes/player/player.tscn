@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://d1281vwqnfsc4" path="res://assets/textures/player/run cycle 48x48.png" id="11_et86i"]
 [ext_resource type="Texture2D" uid="uid://lqto3kkxkuo" path="res://assets/textures/player/player shoot 2H 48x48.png" id="12_ihhw4"]
 [ext_resource type="Texture2D" uid="uid://druab4omj2cih" path="res://assets/textures/player/player ledge climb 48x48.png" id="12_rslc4"]
-[ext_resource type="Texture2D" uid="uid://c1k87xx4l1l8i" path="res://assets/textures/light01.png" id="13_lsjyh"]
+[ext_resource type="Texture2D" uid="uid://c1k87xx4l1l8i" path="res://assets/textures/lights/light01.png" id="13_lsjyh"]
 [ext_resource type="Script" path="res://scripts/state_machine/state_machine.gd" id="14_6a8vq"]
 [ext_resource type="Script" path="res://scenes/player/states/idle.gd" id="15_8ocho"]
 [ext_resource type="Texture2D" uid="uid://bnqvnsd77itp0" path="res://assets/textures/player/Player Side-Climb 48x48.png" id="15_61e7y"]
@@ -940,10 +940,12 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 15
 script = ExtResource("1_k1u3f")
 metadata/_edit_lock_ = true
 
 [node name="Rays" type="Node2D" parent="."]
+position = Vector2(0, -16)
 metadata/_edit_lock_ = true
 
 [node name="RayCast2D_Ledge0" type="RayCast2D" parent="Rays"]
@@ -965,31 +967,34 @@ target_position = Vector2(0, 7)
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3)
+position = Vector2(0, -13)
 shape = SubResource("CapsuleShape2D_3g8ej")
 metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -16)
 zoom = Vector2(3, 3)
 metadata/_edit_lock_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 material = SubResource("ShaderMaterial_f3x8k")
+position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_jibvp")
 animation = &"idle"
 metadata/_edit_lock_ = true
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -16)
 energy = 0.75
 texture = ExtResource("13_lsjyh")
 metadata/_edit_lock_ = true
 
 [node name="debug" type="TextEdit" parent="."]
 offset_left = -21.0
-offset_top = -39.0
+offset_top = -55.0
 offset_right = 147.0
-offset_bottom = 13.0
+offset_bottom = -3.0
 scale = Vector2(0.25, 0.25)
 text = "State"
 metadata/_edit_lock_ = true

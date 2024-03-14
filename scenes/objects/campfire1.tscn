@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://gkmy0ltxm6of"]
 
-[ext_resource type="Texture2D" uid="uid://ry2iqt2x6fup" path="res://assets/textures/campfire01.png" id="1_edhc2"]
-[ext_resource type="Texture2D" uid="uid://c1k87xx4l1l8i" path="res://assets/textures/light01.png" id="2_v3w15"]
+[ext_resource type="Texture2D" uid="uid://ry2iqt2x6fup" path="res://assets/textures/objects/campfire01.png" id="1_edhc2"]
+[ext_resource type="Texture2D" uid="uid://c1k87xx4l1l8i" path="res://assets/textures/lights/light01.png" id="2_v3w15"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0jdtn"]
 atlas = ExtResource("1_edhc2")
