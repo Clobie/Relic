@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://b3wyymodfyql3"]
+[gd_scene load_steps=5 format=3 uid="uid://b3wyymodfyql3"]
 
+[ext_resource type="Script" path="res://scenes/rooms/room3.gd" id="1_1seel"]
 [ext_resource type="PackedScene" uid="uid://dyxtfb5bp0j5n" path="res://scenes/tilemaps/dungeon1.tscn" id="1_3x72l"]
 [ext_resource type="PackedScene" uid="uid://cxlw6ocqk475r" path="res://scenes/player/player.tscn" id="2_sq0jm"]
 
@@ -7,6 +8,7 @@
 light_mode = 1
 
 [node name="Room3" type="Node2D"]
+script = ExtResource("1_1seel")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("CanvasItemMaterial_kwyvi")
@@ -17,6 +19,7 @@ offset_bottom = 415.0
 color = Color(0, 0, 0, 1)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+visible = false
 blend_mode = 1
 
 [node name="Dungeon1" parent="." instance=ExtResource("1_3x72l")]
