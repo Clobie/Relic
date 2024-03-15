@@ -20,7 +20,16 @@ config/icon="res://icon.svg"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
-window/stretch/aspect="keep_width"
+
+[file_customization]
+
+folder_colors={
+"res://EXPORT/": "gray",
+"res://assets/": "red",
+"res://scenes/": "orange",
+"res://scripts/": "yellow",
+"res://shaders/": "green"
+}
 
 [input]
 

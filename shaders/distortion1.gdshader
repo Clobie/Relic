@@ -1,5 +1,5 @@
 shader_type canvas_item;
-render_mode unshaded;
+//render_mode unshaded;
 
 uniform sampler2D noise;
 uniform float speed: hint_range(0.00, 1.0, 0.01) = 0.3;

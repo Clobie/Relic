@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://c45x1dsg4b6os"]
+
+[ext_resource type="Script" path="res://scenes/objects/water/spring.gd" id="1_wnduc"]
+
+[sub_resource type="Gradient" id="Gradient_8qfjr"]
+colors = PackedColorArray(0.41645, 0.684529, 1, 0.388235, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_40ikt"]
+gradient = SubResource("Gradient_8qfjr")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_x5wh6"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(4, 1, 1)
+velocity_pivot = Vector3(0, 1, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 50.0
+gravity = Vector3(0, 98, 0)
+scale_min = 0.25
+scale_max = 2.0
+color_ramp = SubResource("GradientTexture1D_40ikt")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sdsno"]
+size = Vector2(8, 8)
+
+[node name="Spring" type="Node2D"]
+script = ExtResource("1_wnduc")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+rotation = -1.5708
+emitting = false
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_x5wh6")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+trail_lifetime = 0.1
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_sdsno")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

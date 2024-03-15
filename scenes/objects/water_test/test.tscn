@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://col6okxepfb4r"]
+
+[ext_resource type="PackedScene" uid="uid://c0yo6rkfmb8j2" path="res://scenes/objects/water_test/water.tscn" id="1_q4lxv"]
+
+[node name="TEST" type="Node2D"]
+
+[node name="Water" parent="." instance=ExtResource("1_q4lxv")]
+position = Vector2(364, 311)
