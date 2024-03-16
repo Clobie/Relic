@@ -3,7 +3,7 @@ extends Node2D
 @onready var global_light = $DirectionalLight2D
 
 func _ready() -> void:
-	pass#global_light.visible = true
+	global_light.visible = true
 
 
 func _process(delta: float) -> void:

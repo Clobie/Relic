@@ -1,17 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkm1extc2tvh"]
+[gd_scene load_steps=2 format=3 uid="uid://dkm1extc2tvh"]
 
 [ext_resource type="Script" path="res://scenes/objects/water/water.gd" id="1_hw8yb"]
-[ext_resource type="Shader" path="res://shaders/water_bg_mix.gdshader" id="2_3deav"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_5svpw"]
-shader = ExtResource("2_3deav")
-shader_parameter/tint = Color(0, 0.313726, 1, 1)
 
 [node name="Water" type="Node2D"]
 script = ExtResource("1_hw8yb")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-material = SubResource("ShaderMaterial_5svpw")
 color = Color(0, 0.541176, 1, 0.388235)
 
 [node name="Line2D" type="Line2D" parent="."]

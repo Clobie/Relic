@@ -1,17 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://41rdeh0ssynm"]
+[gd_scene load_steps=2 format=3 uid="uid://41rdeh0ssynm"]
 
 [ext_resource type="Script" path="res://scenes/objects/water/water.gd" id="1_qutuk"]
-[ext_resource type="Shader" path="res://shaders/water_bg_mix.gdshader" id="2_c28xv"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_5svpw"]
-shader = ExtResource("2_c28xv")
-shader_parameter/tint = Color(0, 0.313726, 1, 1)
 
 [node name="Water" type="Node2D"]
 script = ExtResource("1_qutuk")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-material = SubResource("ShaderMaterial_5svpw")
 color = Color(0, 0.541176, 1, 0.388235)
 
 [node name="Line2D" type="Line2D" parent="."]

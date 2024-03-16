@@ -24,11 +24,7 @@ window/stretch/mode="canvas_items"
 [file_customization]
 
 folder_colors={
-"res://EXPORT/": "gray",
-"res://assets/": "red",
-"res://scenes/": "orange",
-"res://scripts/": "yellow",
-"res://shaders/": "green"
+"res://EXPORT/": "gray"
 }
 
 [input]

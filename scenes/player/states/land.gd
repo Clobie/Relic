@@ -24,6 +24,8 @@ func loop_physics_process(delta):
 		statemachine.set_state("run")
 	if unit.jump():
 		statemachine.set_state("jump")
+	if !unit.is_on_floor():
+		statemachine.set_state("fall")
 
 func loop_process(delta):
 	pass
