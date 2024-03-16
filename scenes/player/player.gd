@@ -48,7 +48,7 @@ func double_jump() -> bool:
 func shoot() -> bool:
 	if !controllable:
 		return false
-	return Input.is_action_pressed("mouse1")
+	return false#Input.is_action_pressed("mouse1")
 
 func apply_gravity(delta) -> void:
 	velocity.y += gravity * delta
