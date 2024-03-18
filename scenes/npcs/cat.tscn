@@ -268,9 +268,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_l377u")
 }],
-"loop": true,
+"loop": false,
 "name": &"head_scratch",
-"speed": 5.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -328,7 +328,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gjmuq")
 }],
-"loop": true,
+"loop": false,
 "name": &"jump",
 "speed": 12.0
 }, {
@@ -345,7 +345,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wtb05")
 }],
-"loop": true,
+"loop": false,
 "name": &"lick",
 "speed": 12.0
 }, {
@@ -465,10 +465,8 @@ collision_mask = 15
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_bn1js")
-animation = &"boop"
+animation = &"idle1"
 autoplay = "idle1"
-frame = 5
-frame_progress = 0.445923
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
