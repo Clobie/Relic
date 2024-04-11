@@ -976,7 +976,7 @@ metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -16)
-zoom = Vector2(2, 2)
+zoom = Vector2(3, 3)
 metadata/_edit_lock_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -994,6 +994,7 @@ texture = ExtResource("13_lsjyh")
 metadata/_edit_lock_ = true
 
 [node name="debug" type="TextEdit" parent="."]
+visible = false
 offset_left = -21.0
 offset_top = -55.0
 offset_right = 147.0
