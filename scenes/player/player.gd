@@ -13,7 +13,7 @@ var double_jump_force: float = 300.0 # 3 blocks
 var can_double_jump: bool = true
 var run_speed: float = 11000.0 # why is this so high
 var controllable: bool = true
-
+var threshold = 0.5
 var look_dir: int = 1
 
 func _ready() -> void:
@@ -27,14 +27,14 @@ func _physics_process(delta: float) -> void:
 
 func move_axis() -> float:
 	var axis = Input.get_axis("a", "d")
-	if axis != 0:
-		look_dir = axis
-		anim.scale.x = anim.scale.y * axis
-		ledge_top_ray.target_position.y =  9 * axis
-		ledge_mid_ray.target_position.y = 7.1 * axis
-		wall_mid_ray.target_position.y = 7.1 * axis
-	return axis
-
+	look_dir = 0 if abs(axis) <threshold else (1 if axis > 0 else -1)
+	if look_dir != 0:
+		anim.scale.x = anim.scale.y * look_dir
+		ledge_top_ray.target_position.y =  9 * look_dir
+		ledge_mid_ray.target_position.y = 7.1 * look_dir
+		wall_mid_ray.target_position.y = 7.1 * look_dir
+		return look_dir
+	return 0
 func jump() -> bool:
 	if !controllable:
 		return false
